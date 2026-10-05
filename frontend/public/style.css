@@ -1,0 +1,24 @@
+* { box-sizing: border-box; font-family: system-ui, sans-serif; }
+body { margin: 0; background: #f1f4f9; color: #1f2937; }
+header { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; text-align: center; padding: 28px 16px; }
+header h1 { margin: 0; font-size: 1.8rem; }
+header p { margin: 4px 0 0; opacity: .8; font-size: .85rem; }
+main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label { display: block; font-size: .8rem; margin-bottom: 12px; }
+input, select { width: 100%; padding: 9px; margin-top: 4px; border: 1px solid #d1d5db; border-radius: 6px; }
+button { border: 0; border-radius: 6px; padding: 7px 12px; color: #fff; cursor: pointer; font-weight: 600; }
+.btn-green { width: 100%; background: #16a34a; padding: 11px; }
+.btn-grey { width: 100%; background: #6b7280; margin-top: 8px; }
+.btn-detail { background: #6366f1; } .btn-edit { background: #facc15; color: #1f2937; } .btn-delete { background: #ef4444; }
+.rekap-head { display: flex; justify-content: space-between; align-items: center; }
+#saldo { color: #1d4ed8; font-weight: 700; }
+table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+th, td { padding: 10px 6px; border-bottom: 1px solid #eee; text-align: left; }
+.badge { padding: 2px 8px; border-radius: 4px; font-size: .7rem; color: #fff; }
+.badge.pemasukan { background: #06b6d4; } .badge.pengeluaran { background: #f97316; }
+td.pemasukan { color: #16a34a; } td.pengeluaran { color: #dc2626; }
+dialog { border: 0; border-radius: 12px; padding: 24px; min-width: 300px; }
+dialog button { background: #2563eb; }
+@media (max-width: 600px) { .row { grid-template-columns: 1fr; } table { font-size: .75rem; } }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kas Digital RW 25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📊 Kas Digital RW 25</h1>
+    <p>Sistem Informasi Pengelolaan Keuangan Warga</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 id="form-title">Tambah Transaksi</h2>
+      <form id="form">
+        <input type="hidden" id="id">
+        <div class="row">
+          <label>Tanggal <input type="date" id="tanggal" required></label>
+          <label>Tipe Transaksi
+            <select id="tipe">
+              <option value="pemasukan">Pemasukan (+)</option>
+              <option value="pengeluaran">Pengeluaran (-)</option>
+            </select>
+          </label>
+        </div>
+        <label>Keterangan <input id="keterangan" placeholder="Contoh: Iuran Wajib April" required></label>
+        <label>Jumlah (Rp) <input type="number" id="jumlah" min="1" step="1" placeholder="Contoh: 500000" required></label>
+        <button type="submit" class="btn-green" id="btn-simpan">Simpan Transaksi</button>
+        <button type="button" class="btn-grey" id="btn-batal" hidden>Batal Edit</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="rekap-head">
+        <h2>Rekapitulasi Transaksi</h2>
+        <span id="saldo">Total Saldo: -</span>
+      </div>
+      <table>
+        <thead><tr><th>Tanggal</th><th>Keterangan</th><th>Tipe</th><th>Jumlah</th><th>Action</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <dialog id="detail">
+    <h3>Detail Transaksi</h3>
+    <div id="detail-isi"></div>
+    <button onclick="this.closest('dialog').close()">Tutup</button>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
